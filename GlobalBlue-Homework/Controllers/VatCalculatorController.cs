@@ -1,3 +1,4 @@
+using GlobalBlue_Homework.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GlobalBlue_Homework.Controllers;
