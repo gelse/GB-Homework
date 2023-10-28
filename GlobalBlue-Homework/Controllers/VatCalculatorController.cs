@@ -36,10 +36,6 @@ public class VatCalculatorController : ControllerBase
                 return UnprocessableEntity(ModelState);
             return Ok(_vatWorker.Run(vatValues));
         }
-        catch (NotImplementedException)
-        {
-            return StatusCode((int)HttpStatusCode.NotImplemented);
-        }
         catch (AmbiguousInputException e)
         {
             ModelState.AddModelError(string.Empty, e.Message);
