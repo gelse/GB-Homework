@@ -18,5 +18,6 @@ public class VatCalculatorController : ControllerBase
     public IEnumerable<VatValues> FillMissing(VatValues vatValues)
     {
         throw new NotImplementedException();
+    [ServiceFilter(typeof(ValidationFilterAttribute))]
     }
 }
