@@ -1,0 +1,390 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-10-29T16:39:17.476Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_1a01f9889f844dd0a8b6b74e9c1441d9",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597210980,
+      "created": 1698487709980,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "OK_VatAmount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n  \"vatAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1698487709980,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "parentId": null,
+      "modified": 1698597543229,
+      "created": 1698487700079,
+      "name": "TestCases",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_bd6cb249c22447839bb35b6769419235",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597258726,
+      "created": 1698597254648,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_NoAmount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1698026113806.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b1908d48c0b7472d80fd5242a8eb75e3",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597291521,
+      "created": 1698597276962,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_ManyAmounts",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n\t\"vatAmount\": 80,\n\t\"netAmount\": 800\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1697795315719.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_aecffce439e549d9a866f68f56a49e9e",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597238597,
+      "created": 1698597235818,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_Illegal_VatRate",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 12,\n  \"vatAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1697564517633,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e3e4dbe2d3d84410999b12e1ce54218c",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597323572,
+      "created": 1698597316264,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_Illegal_VatRate2",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": \"a\",\n  \"vatAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1697102921459.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3f75072e69154d3cbe4cfebb7b468a36",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597375116,
+      "created": 1698597371428,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_Missing_VatRate",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696872123372.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_618e72754c294e9e862395265860faf5",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597177906,
+      "created": 1698597177906,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "OK_NetAmount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n  \"netAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696641325286,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6057f98e427643abb6765b73610e6642",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597406203,
+      "created": 1698597401599,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_Illegal_NetAmount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n  \"netAmount\": 0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696179729112.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_58c7976757ce46278edce1649a13b58c",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597511112,
+      "created": 1698597508561,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "Fail_Illegal_NetAmount2",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n  \"netAmount\": -12\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1695948931025.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f0cb5f00c3c2426d973216b7a15ca206",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698597197477,
+      "created": 1698597193182,
+      "url": "http://localhost:8080/VatCalculationValues",
+      "name": "OK_GrossAmount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vatRate\": 10,\n  \"grossAmount\": 80\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1695718132939,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_6c0b6f599d02570a64f19fb5cfac4c4474b0eb0d",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698487700081,
+      "created": 1698487700081,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1698487700081,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_6c0b6f599d02570a64f19fb5cfac4c4474b0eb0d",
+      "parentId": "wrk_7445c9bc6b9f480ab5f7d35d82dd11f0",
+      "modified": 1698487700082,
+      "created": 1698487700082,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
