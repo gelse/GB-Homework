@@ -13,7 +13,7 @@ namespace GlobalBlue_Homework.Model;
 //     VatRate30 = 30
 // }
 
-public class VatValuesRequest
+public class VatCalculationValues
 {
     [Required]
     public int VatRate { get; set; }

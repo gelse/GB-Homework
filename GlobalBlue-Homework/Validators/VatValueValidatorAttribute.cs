@@ -21,7 +21,7 @@ public abstract class VatValueCalculator : IVatValueValidator
     
     public IEnumerable<ValidationResult> Validate(object? validatedObject)
     {
-        var vatValues = validatedObject as VatValuesRequest;
+        var vatValues = validatedObject as VatCalculationValues;
         if (vatValues == null)
         {
             yield return new ValidationResult("object must not be null.");
@@ -29,7 +29,7 @@ public abstract class VatValueCalculator : IVatValueValidator
         }
         
         if(!AllowedVatValues.Contains(vatValues.VatRate))
-            yield return new ValidationResult($"VatRate must be one of the values {AllowedVatValuesString}", new[]{nameof(VatValuesRequest.VatRate)});
+            yield return new ValidationResult($"VatRate must be one of the values {AllowedVatValuesString}", new[]{nameof(VatCalculationValues.VatRate)});
         
         switch (vatValues)
         {

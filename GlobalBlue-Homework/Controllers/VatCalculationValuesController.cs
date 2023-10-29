@@ -10,13 +10,13 @@ namespace GlobalBlue_Homework.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class VatCalculatorController : ControllerBase
+public class VatCalculationValuesController : ControllerBase
 {
-    private readonly ILogger<VatCalculatorController> _logger;
+    private readonly ILogger<VatCalculationValuesController> _logger;
     private readonly IVatValueValidator _vatValueValidator;
     private readonly IVatWorker _vatWorker;
 
-    public VatCalculatorController(ILogger<VatCalculatorController> logger, IVatValueValidator vatValueValidator, IVatWorker vatWorker)
+    public VatCalculationValuesController(ILogger<VatCalculationValuesController> logger, IVatValueValidator vatValueValidator, IVatWorker vatWorker)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _vatValueValidator = vatValueValidator ?? throw new ArgumentNullException(nameof(vatValueValidator));
@@ -26,15 +26,15 @@ public class VatCalculatorController : ControllerBase
     /// <summary>
     /// Calculates the missing values for the VAT of Austria.
     /// </summary>
-    [HttpPost(Name = "FillMissing")]
+    [HttpPost]
     [ServiceFilter(typeof(ValidationFilterAttribute))]
-    public IActionResult FillMissing(VatValuesRequest vatValues)
+    public IActionResult FillVatCalculationValues(VatCalculationValues vatCalculationValues)
     {
         try
         {
             if (!ModelState.IsValid)
                 return UnprocessableEntity(ModelState);
-            return Ok(_vatWorker.Run(vatValues));
+            return Ok(_vatWorker.Run(vatCalculationValues));
         }
         catch (AmbiguousInputException e)
         {

@@ -16,7 +16,7 @@ public class ValidationFilterAttribute : IActionFilter
     public void OnActionExecuting(ActionExecutingContext context)
     {
         // custom validation
-        foreach (var error in _vatValueValidator.Validate(context.ActionArguments["vatValues"]))
+        foreach (var error in _vatValueValidator.Validate(context.ActionArguments["vatCalculationValues"]))
         {
             if(error.MemberNames.Any())
             {

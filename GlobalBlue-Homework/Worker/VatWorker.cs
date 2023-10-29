@@ -5,12 +5,12 @@ namespace GlobalBlue_Homework.Worker;
 
 public interface IVatWorker
 {
-    public VatValuesResult Run(VatValuesRequest request);
+    public VatCalculationValues Run(VatCalculationValues request);
 }
 
 public class VatWorker : IVatWorker
 {
-    public VatValuesResult Run(VatValuesRequest request)
+    public VatCalculationValues Run(VatCalculationValues request)
     {
         decimal grossAmount;
         decimal netAmount;
@@ -38,7 +38,7 @@ public class VatWorker : IVatWorker
                 throw new AmbiguousInputException(request.GrossAmount, request.NetAmount, request.VatAmount);
         }
         
-        return new VatValuesResult()
+        return new VatCalculationValues()
         {
             GrossAmount = grossAmount,
             NetAmount = netAmount,
