@@ -1,6 +1,6 @@
-using GlobalBlue_Homework.Filters;
-using GlobalBlue_Homework.Validators;
-using GlobalBlue_Homework.Worker;
+using GB_Homework.Filters;
+using GB_Homework.Validators;
+using GB_Homework.Worker;
 
 var builder = WebApplication.CreateBuilder(args);
 

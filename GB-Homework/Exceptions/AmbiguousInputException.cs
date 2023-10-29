@@ -1,4 +1,4 @@
-namespace GlobalBlue_Homework.Exceptions;
+namespace GB_Homework.Exceptions;
 
 public class AmbiguousInputException : Exception
 {

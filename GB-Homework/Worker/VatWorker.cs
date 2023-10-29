@@ -1,7 +1,7 @@
-using GlobalBlue_Homework.Exceptions;
-using GlobalBlue_Homework.Model;
+using GB_Homework.Exceptions;
+using GB_Homework.Model;
 
-namespace GlobalBlue_Homework.Worker;
+namespace GB_Homework.Worker;
 
 public interface IVatWorker
 {

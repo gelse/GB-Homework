@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalBlue-Homework", "GlobalBlue-Homework\GlobalBlue-Homework.csproj", "{8DAE4F9A-5043-47A8-A415-DA623154C3F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-Homework", "GB-Homework\GB-Homework.csproj", "{8DAE4F9A-5043-47A8-A415-DA623154C3F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using GlobalBlue_Homework.Model;
+using GB_Homework.Model;
 
-namespace GlobalBlue_Homework.Validators;
+namespace GB_Homework.Validators;
 
 public interface IVatValueValidator
 {

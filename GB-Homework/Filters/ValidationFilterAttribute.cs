@@ -1,8 +1,8 @@
-using GlobalBlue_Homework.Validators;
+using GB_Homework.Validators;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace GlobalBlue_Homework.Filters;
+namespace GB_Homework.Filters;
 
 public class ValidationFilterAttribute : IActionFilter
 {

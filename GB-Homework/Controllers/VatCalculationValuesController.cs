@@ -1,12 +1,12 @@
 using System.Net;
-using GlobalBlue_Homework.Exceptions;
-using GlobalBlue_Homework.Filters;
-using GlobalBlue_Homework.Model;
-using GlobalBlue_Homework.Validators;
-using GlobalBlue_Homework.Worker;
+using GB_Homework.Exceptions;
+using GB_Homework.Filters;
+using GB_Homework.Model;
+using GB_Homework.Validators;
+using GB_Homework.Worker;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GlobalBlue_Homework.Controllers;
+namespace GB_Homework.Controllers;
 
 [ApiController]
 [Route("[controller]")]

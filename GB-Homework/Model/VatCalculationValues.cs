@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace GlobalBlue_Homework.Model;
+namespace GB_Homework.Model;
 
 // that would be one solution of the validation problem of the vat validation.
 // as there are only 3 possible values - and it would also be visible in swagger.
