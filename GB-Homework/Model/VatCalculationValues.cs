@@ -18,7 +18,12 @@ public class VatCalculationValues
     [Required]
     public int VatRate { get; set; }
     
+    [Range(double.Epsilon, double.MaxValue)]
     public decimal? GrossAmount { get; set; }
+    
+    [Range(double.Epsilon, double.MaxValue)]
     public decimal? VatAmount { get; set; }
+    
+    [Range(double.Epsilon, double.MaxValue)]
     public decimal? NetAmount { get; set; }
 }
