@@ -3,7 +3,7 @@ using GB_Homework.Model;
 
 namespace GB_Homework.Worker;
 
-public interface IVatWorker
+public interface IVatCalculationWorker
 {
     public VatCalculationValues Run(VatCalculationValues request);
 }
@@ -11,7 +11,7 @@ public interface IVatWorker
 /// <summary>
 /// The worker class for calculating the missing values of <see cref="VatCalculationValues"/>.
 /// </summary>
-public class VatWorker : IVatWorker
+public class VatCalculationWorker : IVatCalculationWorker
 {
     /// <summary>
     /// Actually executes the calculation of the missing values.

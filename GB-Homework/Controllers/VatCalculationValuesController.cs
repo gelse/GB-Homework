@@ -17,9 +17,9 @@ public class VatCalculationValuesController : ControllerBase
 {
     private readonly ILogger<VatCalculationValuesController> _logger;
     private readonly IVatValueValidator _vatValueValidator;
-    private readonly IVatWorker _vatWorker;
+    private readonly IVatCalculationWorker _vatWorker;
 
-    public VatCalculationValuesController(ILogger<VatCalculationValuesController> logger, IVatValueValidator vatValueValidator, IVatWorker vatWorker)
+    public VatCalculationValuesController(ILogger<VatCalculationValuesController> logger, IVatValueValidator vatValueValidator, IVatCalculationWorker vatWorker)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _vatValueValidator = vatValueValidator ?? throw new ArgumentNullException(nameof(vatValueValidator));
