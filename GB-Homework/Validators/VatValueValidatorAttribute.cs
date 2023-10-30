@@ -3,6 +3,9 @@ using GB_Homework.Model;
 
 namespace GB_Homework.Validators;
 
+/// <summary>
+/// Injectable IVatValueValidator class.
+/// </summary>
 public interface IVatValueValidator
 {
     IEnumerable<ValidationResult> Validate(object? vatValues);
@@ -19,6 +22,10 @@ public abstract class VatValueCalculator : IVatValueValidator
     private string AllowedVatValuesString =>
         string.Join(", ", AllowedVatValues);
     
+    /// <summary>
+    /// Executes the validation.
+    /// </summary>
+    /// <returns>An enumerable of <see cref="ValidationResult"/>s</returns>
     public IEnumerable<ValidationResult> Validate(object? validatedObject)
     {
         var vatValues = validatedObject as VatCalculationValues;
@@ -46,6 +53,9 @@ public abstract class VatValueCalculator : IVatValueValidator
     }
 }
 
+/// <summary>
+/// Validator for Austria.
+/// </summary>
 public class AustrianVatValueValidator : VatValueCalculator
 {
     private static readonly int[] _allowedVatValues = { 10, 13, 20 };

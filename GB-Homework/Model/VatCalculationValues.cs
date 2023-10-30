@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace GB_Homework.Model;
@@ -13,17 +14,32 @@ namespace GB_Homework.Model;
 //     VatRate30 = 30
 // }
 
+/// <summary>
+/// Wrapper object that represents the different amounts of VAT.
+/// </summary>
 public class VatCalculationValues
 {
+    /// <summary>
+    /// The VAT rate as int - in austria restricted to the values 10, 13 and 20
+    /// </summary>
     [Required]
     public int VatRate { get; set; }
     
+    /// <summary>
+    /// The gross (brutto) amount. Must be greater than 0. 
+    /// </summary>
     [Range(double.Epsilon, double.MaxValue)]
     public decimal? GrossAmount { get; set; }
     
+    /// <summary>
+    /// The amount of the vat. Must be greater than 0. 
+    /// </summary>
     [Range(double.Epsilon, double.MaxValue)]
     public decimal? VatAmount { get; set; }
     
+    /// <summary>
+    /// The net (netto) amount. Must be greater than 0. 
+    /// </summary>
     [Range(double.Epsilon, double.MaxValue)]
     public decimal? NetAmount { get; set; }
 }

@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace GB_Homework.Filters;
 
+/// <summary>
+/// Implementation of the IActionFilter to provide validation.
+/// </summary>
 public class ValidationFilterAttribute : IActionFilter
 {
     private readonly IVatValueValidator _vatValueValidator;
@@ -13,6 +16,9 @@ public class ValidationFilterAttribute : IActionFilter
         _vatValueValidator = vatValueValidator ?? throw new ArgumentNullException(nameof(vatValueValidator));
     }
     
+    /// <summary>
+    /// Executes the validation (validator injected as a service) and adds model errors if invalid. 
+    /// </summary>
     public void OnActionExecuting(ActionExecutingContext context)
     {
         // custom validation

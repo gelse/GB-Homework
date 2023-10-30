@@ -8,8 +8,16 @@ public interface IVatWorker
     public VatCalculationValues Run(VatCalculationValues request);
 }
 
+/// <summary>
+/// The worker class for calculating the missing values of <see cref="VatCalculationValues"/>.
+/// </summary>
 public class VatWorker : IVatWorker
 {
+    /// <summary>
+    /// Actually executes the calculation of the missing values.
+    /// Expects <paramref name="request"/> to be valid, throws an exception if not.
+    /// Returns a new (!) object (does not change the original).
+    /// </summary>
     public VatCalculationValues Run(VatCalculationValues request)
     {
         decimal grossAmount;

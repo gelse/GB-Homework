@@ -1,5 +1,8 @@
 namespace GB_Homework.Exceptions;
 
+/// <summary>
+/// Describes an error where we could not calculate the missing values, either because we have too few or too many values.
+/// </summary>
 public class AmbiguousInputException : Exception
 {
     public decimal? GrossAmount { get; }

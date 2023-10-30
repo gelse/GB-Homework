@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GB_Homework.Controllers;
 
+/// <summary>
+/// REST controller for <see cref="VatCalculationValues"/>
+/// </summary>
 [ApiController]
 [Route("[controller]")]
 public class VatCalculationValuesController : ControllerBase
@@ -25,6 +28,9 @@ public class VatCalculationValuesController : ControllerBase
 
     /// <summary>
     /// Calculates the missing values for the VAT of Austria.
+    /// POST verb, as that is the closest what we have.
+    /// we do not have real REST here, as this endpoint, according to the description is a custom functionality
+    /// and a mixture of typical "GET" and "POST" entity. After all, we do not really have an entity here.
     /// </summary>
     [HttpPost]
     [ServiceFilter(typeof(ValidationFilterAttribute))]

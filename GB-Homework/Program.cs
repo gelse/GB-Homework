@@ -12,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ValidationFilterAttribute>();
 builder.Services.AddSingleton<IVatWorker, VatWorker>();
+
+// that registration can easily be switched to a different validator. i know i broke YAGNI with it.
 builder.Services.AddSingleton<IVatValueValidator, AustrianVatValueValidator>();
 
 var app = builder.Build();
