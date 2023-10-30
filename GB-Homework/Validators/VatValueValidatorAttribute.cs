@@ -15,7 +15,7 @@ public interface IVatValueValidator
 /// Base class for VatValueCalculator and i hope the ONLY class where i broke the KISS and YAGNI principle.
 /// But i did it on purpose.
 /// </summary>
-public abstract class VatValueCalculator : IVatValueValidator
+public abstract class VatValueValidator : IVatValueValidator
 {
     protected abstract int[] AllowedVatValues { get; }
 
@@ -56,7 +56,7 @@ public abstract class VatValueCalculator : IVatValueValidator
 /// <summary>
 /// Validator for Austria.
 /// </summary>
-public class AustrianVatValueValidator : VatValueCalculator
+public class AustrianVatValueValidator : VatValueValidator
 {
     private static readonly int[] _allowedVatValues = { 10, 13, 20 };
 
