@@ -38,6 +38,13 @@ public abstract class VatValueValidator : IVatValueValidator
         if(!AllowedVatValues.Contains(vatValues.VatRate))
             yield return new ValidationResult($"VatRate must be one of the values {AllowedVatValuesString}", new[]{nameof(VatCalculationValues.VatRate)});
         
+        if(vatValues.VatAmount <= 0)
+            yield return new ValidationResult($"{nameof(VatCalculationValues.VatAmount)} must have a greater value than 0.", new[]{nameof(VatCalculationValues.VatAmount)});
+        if(vatValues.NetAmount <= 0)
+            yield return new ValidationResult($"{nameof(VatCalculationValues.NetAmount)} must have a greater value than 0.", new[]{nameof(VatCalculationValues.NetAmount)});
+        if(vatValues.GrossAmount <= 0)
+            yield return new ValidationResult($"{nameof(VatCalculationValues.GrossAmount)} must have a greater value than 0.", new[]{nameof(VatCalculationValues.GrossAmount)});
+        
         switch (vatValues)
         {
             case { GrossAmount: not null, NetAmount: null, VatAmount: null }:
