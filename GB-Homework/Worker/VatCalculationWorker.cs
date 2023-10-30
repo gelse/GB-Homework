@@ -20,6 +20,7 @@ public class VatCalculationWorker : IVatCalculationWorker
     /// </summary>
     public VatCalculationValues Run(VatCalculationValues request)
     {
+        if (request == null) throw new ArgumentNullException(nameof(request));
         decimal grossAmount;
         decimal netAmount;
         decimal vatAmount;
