@@ -10,9 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<ValidationFilterAttribute>();
-builder.Services.AddTransient<IVatWorker, VatWorker>();
-builder.Services.AddTransient<IVatValueValidator, AustrianVatValueValidator>();
+builder.Services.AddSingleton<ValidationFilterAttribute>();
+builder.Services.AddSingleton<IVatWorker, VatWorker>();
+builder.Services.AddSingleton<IVatValueValidator, AustrianVatValueValidator>();
 
 var app = builder.Build();
 
